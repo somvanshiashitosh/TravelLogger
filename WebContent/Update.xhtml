@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<link rel="stylesheet" href="style.css"/>
+<title>Update</title>
+</h:head>
+<h:body>
+<center>
+<fieldset>
+<legend>select proper action</legend>
+<h:form id="frm">
+<table>
+<tr>
+<td>
+<h:outputText class="text" value="Roll No:-"/></td>
+<td>
+<h:inputText value="#{student.rollno}" id="rno" required="true" requiredMessage="please enter roll no"></h:inputText></td>
+<td><h:message id="m1" for="rno" style="color:red"/></td> 
+</tr>
+</table>
+<h:commandButton aligned="center" class="button" value="SUBMIT" action="#{student.getData}"></h:commandButton>
+</h:form>
+</fieldset>
+</center>
+</h:body>
+</html>

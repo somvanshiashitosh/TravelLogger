@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<link rel="stylesheet" href="style.css"/>
+<title>Registration</title>
+</h:head>
+<h:body>
+<center>
+		<h:outputLabel value="Registration" id="heading"></h:outputLabel>
+	<fieldset>
+	<legend>Enter details:</legend>
+<h:form id="frm">
+<br></br><br></br>
+<table>
+<tr>
+<td><h:outputLabel class="text" value="Name:-"/></td>
+<td><h:inputText class="text" value="#{student.name}" id="fname" required="true" requiredMessage="please enter name"></h:inputText></td>
+<td><h:message id="m2" for="fname" style="color:red"/></td>
+</tr>
+
+<tr>
+<td><h:outputLabel class="text" value="Email id:-"/></td>
+<td><h:inputText class="text" value="#{student.emailid}" id="eid" required="true" requiredMessage="please enter email"></h:inputText></td>
+<td><h:message id="m3" for="eid" style="color:red"/></td></tr>
+</table>
+
+<br></br><br></br>
+<h:commandButton aligned="center" class="button" value="SUBMIT" action="#{student.savingData}"></h:commandButton>
+</h:form>
+</fieldset>
+</center>
+</h:body>
+</html>
